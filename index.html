@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Choose same card</title>
+  </head>
+  <body>
+    <div id="game-window">
+      <!-- game setup -->
+      <div id="start-window">
+        <h1>Memory</h1>
+        <div class="size-and-difficulty">
+            <div id="size-of-field">
+                <p class="header-of-size-field">
+                  Choose the size of the playing field
+                </p>
+                <select name="field" id="field-select">
+                  <option value="6">6x6</option>
+                  <option value="8">8x8</option>
+                  <option value="10">10x10</option>
+                </select>
+              </div>
+              <div id="difficulty-div">
+                <p class="header-of-difficulty">Choose the difficulty level:</p>
+                <div id="difficulty-select">
+                  <label
+                    ><input
+                      type="radio"
+                      id="ease"
+                      name="difficulty"
+                      checked
+                    />ease</label
+                  >
+                  <label
+                    ><input type="radio" id="normal" name="difficulty" />normal</label
+                  >
+                  <label
+                    ><input type="radio" id="hard" name="difficulty" />hard</label
+                  >
+                </div>
+              </div>
+        </div>
+        
+        <button id="play-btn" class="btn">Play!</button>
+      </div>
+      <!-- game field-->
+      <div id="game-container">
+        <div id="pause-overlay"></div>
+
+        <div id="timer">00:00.00</div>
+        <div id="interface-btn">
+          <button id="restart-btn" class="btn">Restart</button>
+          <button id="pause-btn" class="btn">Stop</button>
+          <button id="exit-btn" class="btn">Exit</button>
+        </div>
+      </div>
+      <div id="win-message" style="display: none"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
